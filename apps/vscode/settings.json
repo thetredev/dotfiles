@@ -1,0 +1,13 @@
+{
+    "editor.fontFamily": "Cascadia Code",
+    "editor.fontSize": 20,
+    "explorer.autoReveal": false,
+    "explorer.confirmDragAndDrop": false,
+    "files.trimTrailingWhitespace": true,
+    "terminal.integrated.fontFamily": "Cascadia Code",
+    "terminal.integrated.fontSize": 20,
+    "terminal.integrated.showExitAlert": false,
+    "security.workspace.trust.emptyWindow": false,
+    "security.workspace.trust.enabled": false,
+    "workbench.startupEditor": "none"
+}
