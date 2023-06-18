@@ -2,8 +2,13 @@
 # Execute the following at first setup:
 #  sudo mkdir -p /opt
 #  sudo ln -sf /mnt/c/<path/to/vscode/bin directory> /opt/vscode-bin
+#
 #  sudo nix-channel --add https://github.com/nix-community/home-manager/archive/release-22.05.tar.gz home-manager
 #  sudo nix-channel --add https://github.com/Mic92/nix-ld/archive/main.tar.gz nix-ld
+#  sudo nix-channel --update
+#
+#  sudo cp <path/to/nix-ld-config.nix> /etc/nixos/nix-ld-config.nix
+#
 #  sudo nixos-rebuild switch
 #
 # Then exit out of any WSL shell and restart WSL via PowerShell:
