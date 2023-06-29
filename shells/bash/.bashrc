@@ -23,7 +23,7 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # Prompt color
-export PS1="\[\e[31m\][\[\e[m\]\[\e[38;5;172m\]\u\[\e[m\]@\[\e[38;5;153m\]\h\[\e[m\] \[\e[38;5;214m\]\W\[\e[m\]\[\e[31m\]]\[\e[m\]\\$ "
+export PS1="\r\n\e[$(tput setaf 1)[$(tput setaf 3)\u$(tput setaf 7)@$(tput setaf 6)\h$(tput setaf 7) \t$(tput setaf 1)]\e[m \w\r\n\$ "
 
 # User profile
 if [ -f ${HOME}/.user_profile.sh ]; then
