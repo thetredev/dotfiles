@@ -6,7 +6,5 @@ dbus-uuidgen --ensure=/etc/machine-id
 rm -rf /var/lib/dbus/machine-id
 dbus-uuidgen --ensure
 
-rm -rf /etc/ssh/ssh_*_key*
-ssh-keygen -A
-
-reboot
+curl -fsSL https://raw.githubusercontent.com/thetredev/dotfiles/main/vm/init-vm-cleanup-ssh.sh | bash
+poweroff
