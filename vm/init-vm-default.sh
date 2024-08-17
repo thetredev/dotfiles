@@ -1,7 +1,7 @@
 #!/bin/bash
 
 rm -rf /etc/machine-id
-dbus-uuidgen --ensure=/etc/machine-id
+ln -sf /var/lib/dbus/machine-id /etc/machine-id
 
 rm -rf /var/lib/dbus/machine-id
 dbus-uuidgen --ensure
