@@ -64,6 +64,7 @@ iface ${primary_interface} inet dhcp
 
 EOF
 else cat >> /etc/network/interfaces <<EOF
+# The primary network interface
 auto ${primary_interface}
 iface ${primary_interface} inet static
     address ${address}
@@ -81,6 +82,8 @@ unlink /etc/resolv.conf
 rm -rf /etc/resolv.conf
 
 cat >> /etc/resolv.conf <<EOF
+options timeout:1 attempts:5 rotate
+
 nameserver 10.0.2.252
 nameserver 10.0.2.253
 
