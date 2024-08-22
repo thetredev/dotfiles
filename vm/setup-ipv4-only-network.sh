@@ -43,7 +43,7 @@ systemctl mask systemd-resolved
 # configure loopback device via ifupdown2
 chattr -i /etc/network/interfaces
 
-rm -rf /etc/network/interfaces*
+rm -rf /etc/network/interfaces
 cat > /etc/network/interfaces <<EOF
 # The loopback network interface
 auto lo
@@ -73,6 +73,11 @@ iface ${primary_interface} inet static
 EOF
 fi
 
+cat >> /etc/network/interfaces <<EOF
+# Include other ifupdown2 configurations
+source /etc/network/interfaces.d/*
+
+EOF
 chattr -i /etc/network/interfaces
 
 
