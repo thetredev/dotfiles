@@ -3,6 +3,12 @@
 set -x
 
 
+DNS_NAMESERVERS=(
+    "10.0.2.252"
+    "10.0.2.253"
+)
+
+
 
 hostname="${1}"
 domain="${2}"
@@ -89,8 +95,11 @@ rm -rf /etc/resolv.conf
 cat >> /etc/resolv.conf <<EOF
 options timeout:1 attempts:5 rotate
 
-nameserver 10.0.2.252
-nameserver 10.0.2.253
+$(
+    for nameserver in ${DNS_NAMESERVERS[@]}; do
+        echo "${nameserver}"
+    done
+)
 
 domain ${domain}
 search ${domain} ${domain}.
