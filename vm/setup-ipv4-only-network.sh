@@ -96,3 +96,12 @@ domain ${domain}
 search ${domain} ${domain}.
 EOF
 chattr +i /etc/resolv.conf
+
+
+# force BBR TCP congestion mode
+chattr -i /etc/sysctl.d/99-tcp-optimizations.conf
+cat > /etc/sysctl.d/99-tcp-optimizations.conf <<EOF
+net.core.default_qdisc=fq
+net.ipv4.tcp_congestion_control=bbr
+EOF
+chattr +i /etc/sysctl.d/99-tcp-optimizations.conf
