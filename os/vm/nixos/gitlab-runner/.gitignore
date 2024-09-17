@@ -1,0 +1,3 @@
+*.crt
+hardware-configuration.nix
+authorized_keys

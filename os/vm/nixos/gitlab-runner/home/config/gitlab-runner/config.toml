@@ -1,0 +1,22 @@
+concurrent = 4
+
+[[runners]]
+  name = "gitlab-runner-nix"
+  url = "...."
+  token = "...."
+  tls-ca-file = "/etc/gitlab-runner/certs/ca.crt"
+  executor = "docker"
+  limit = 4
+
+  [runners.custom_build_dir]
+  [runners.cache]
+    [runners.cache.s3]
+    [runners.cache.gcs]
+
+  [runners.docker]
+    image = "alpine:3.20"
+    privileged = false
+    disable_cache = true
+    volumes = [
+      "/home/config/gitlab-runner/certs/ca.crt:/etc/gitlab-runner/certs/ca.crt:ro"
+    ]
