@@ -20,6 +20,12 @@ br_netfilter
 EOF
 modprobe br_netfilter
 
+cat > /etc/sysctl.d/99-docker-bridge-nf-call-iptables.conf <<EOF
+net.bridge.bridge-nf-call-ip6tables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+sysctl --system
+
 apt-get update
 apt-get install -y \
     docker-ce \
