@@ -97,7 +97,7 @@ options timeout:1 attempts:5 rotate
 
 $(
     for nameserver in ${DNS_NAMESERVERS[@]}; do
-        echo "${nameserver}"
+        echo "nameserver ${nameserver}"
     done
 )
 
