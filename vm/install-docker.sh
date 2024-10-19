@@ -15,6 +15,11 @@ cat > /etc/apt/sources.list.d/docker.list <<EOF
 deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/${distro} ${distro_version} stable
 EOF
 
+cat > /etc/modules-load.d/docker.conf <<EOF
+br_netfilter
+EOF
+modprobe br_netfilter
+
 apt-get update
 apt-get install -y \
     docker-ce \
