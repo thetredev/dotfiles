@@ -33,7 +33,7 @@ chattr +i /etc/hosts
 
 chattr -i /etc/hostname
 rm -rf /etc/hostname
-echo "${hostname}" > /etc/hostname
+echo "${hostname}.${domain}" > /etc/hostname
 chattr +i /etc/hostname
 
 
