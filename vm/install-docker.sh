@@ -1,7 +1,7 @@
 #!/bin/bash
 
 distro=$(. /etc/os-release && echo "$ID")
-distro_version=$(. /etc/os-release && echo "$VERSION_CODENAME")
+distro_version=${1:-$(. /etc/os-release && echo "$VERSION_CODENAME")}
 
 apt-get update
 apt-get install ca-certificates curl
