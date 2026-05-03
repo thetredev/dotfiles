@@ -1,0 +1,76 @@
+{
+  "theme": {
+    "mode": "dark",
+    "light": "JetBrains Light",
+    "dark": "JetBrains Dark",
+  },
+  "theme_overrides": {
+    "JetBrains Dark": {
+      "syntax": {
+        "constant": {
+          "font_style": "normal", // disable *italic* code
+        },
+      },
+    },
+  },
+  "base_keymap": "VSCode",
+  "cli_default_open_behavior": "new_window",
+  "mouse_wheel_zoom": true,
+  "hard_tabs": false,
+  "tab_size": 4,
+  "icon_theme": "Zed (Default)",
+  "ui_font_size": 20.0,
+  "buffer_font_size": 18.0,
+  "buffer_font_family": "Cascadia Code",
+  "buffer_font_features": {
+    "calt": false, // disable ligatures
+  },
+  "auto_indent_on_paste": false,
+  "use_on_type_format": false,
+  "show_whitespaces": "none",
+  "sticky_scroll": {
+    "enabled": false,
+  },
+  "hover_popover_sticky": false,
+  "remove_trailing_whitespace_on_save": true,
+  "ensure_final_newline_on_save": true,
+  "languages": {
+    "Caddyfile": {
+      "hard_tabs": true,
+      "tab_size": 4,
+    },
+    "JSON": {
+      "tab_size": 2,
+    },
+    "JSONC": {
+      "tab_size": 2,
+    },
+  },
+  "terminal": {
+    "scrollbar": {
+      "show": "always",
+    },
+    "flexible": true,
+    "dock": "bottom",
+    "font_size": 18.0,
+    "font_family": "Cascadia Code",
+  },
+  "session": {
+    "trust_all_worktrees": true,
+  },
+  "project_panel": {
+    "dock": "left",
+    "auto_reveal_entries": false,
+  },
+  "agent": {
+    "dock": "right",
+    "favorite_models": [],
+    "model_parameters": [],
+  },
+  "agent_buffer_font_size": 22.0,
+  "agent_ui_font_size": 22.0,
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false,
+  },
+}
